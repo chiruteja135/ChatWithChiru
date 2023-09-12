@@ -1,5 +1,7 @@
-import React from 'react'
-import { View, Text, StyleSheet, TextInput, Button, TouchableOpacity } from 'react-native'
+import React from 'react';
+import { View, Text, StyleSheet, TextInput, Button, TouchableOpacity } from 'react-native';
+import { Screen } from 'react-native-screens';
+  
 export default function Signup({navigation}) {
 
   return (
@@ -31,7 +33,7 @@ const styles = StyleSheet.create({
     fontSize: 50
   },
   input: {
-    backgroundColor: 'white',
+    backgroundColor: 'lightgrey',
     width: 390,
     borderRadius: 15,
     height: 45,

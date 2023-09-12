@@ -1,22 +1,47 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+// import { StyleSheet, Text, View } from "react-native";
+// import Login from "./components/login.js";
+// import Signup from "./components/signup.js";
+// import Navigation from "./Navigation";
+// import { Screen } from "react-native-screens";
+// import React from "react";
+// import { NavigationContainer } from "@react-navigation/native";
+
+// export default function App() {
+//   return (  
+//     <>
+//         <View style={styles.container}>
+//           <Navigation/>
+//         </View>
+//     </>
+//   );
+// }
+
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     backgroundColor: "#fff",
+//     alignItems: "center",
+//     justifyContent: "center",
+//   },
+// });
+
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import Login from './components/login';
+import Signup from './components/signup';
+
+
+
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text style={[styles.text, { lineHeight: 20,fontSize: 15 }]}>Hi Everyone!</Text>
-      <Text style={[styles.text, { lineHeight: 40,fontSize: 20 }]}>Welcome to MY app </Text>
-      <Text style={[styles.text, { lineHeight: 50,fontSize: 35 }]}>"CHAT WITH CHIRU"</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Login">
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Signup" component={Signup} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

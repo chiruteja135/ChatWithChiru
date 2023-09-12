@@ -6,6 +6,7 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "packages": ["react-native-screens", "react-native-gesture-handler"],
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
